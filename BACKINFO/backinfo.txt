@@ -1,0 +1,52 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: /hd0a/TEMP/backup.096607
+# 2024-12-10  11:00:16
+#
+>>SYSTEM_ID:
+1200-103266
+
+>>PRODUCTS_ID:
+RobotWare Version: 6.13.01.00
+StateMachine Version: 1.1
+
+  UDPUC Driver
+  RobotWare Base
+  English
+  709-1 DeviceNet Master/Slave
+  603-1 Absolute Accuracy
+  608-1 World Zones
+  611-1 Path Recovery
+  613-1 Collision Detection
+  616-1 PC Interface
+  617-1 FlexPendant Interface
+  623-1 Multitasking
+  689-1 Externally Guided Motion (EGM)
+  Axis Calibration
+  Pendelum Calibration
+  Motor Commutation
+  Service Info System
+  IRB 1200-5/0.9 Type B
+  Drive System IRB 120/140/260/360/910SC/1200/1400/1520/1600/1660ID IRC5 Compact
+  StateMachine Core
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+MMC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+
+
+>>TASK1: (T_ROB1,Loop_grind,)
+SYSMOD/user.sys @ 
+PROGMOD/Grinding.mod @ 
+PROGMOD/Training.mod @ 
+
+
+>>EOF:

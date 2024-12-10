@@ -1,0 +1,8 @@
+
+MODULE MyProgramModule
+	VAR num MyNumericData:=0;
+	PROC MyRoutine()
+		MoveJ [[724.32,287.01,323.28],[0.583504,0.377817,0.600095,-0.395807],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]], v200, z50, tool0;
+	ENDPROC
+
+ENDMODULE

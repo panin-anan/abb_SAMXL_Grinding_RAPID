@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Program>
+	<Module>Grinding.mod</Module>
+	<Module>theQuan.mod</Module>
+	<Module>TRobEGM.mod</Module>
+	<Module>TRobRAPID.mod</Module>
+	<Module>TRobMain.mod</Module>
+	<Module>TRobUtility.mod</Module>
+</Program>
