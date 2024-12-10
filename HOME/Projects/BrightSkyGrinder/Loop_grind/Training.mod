@@ -1,5 +1,8 @@
 
 MODULE Training
+    VAR egmident egmID1;                   ! EGM session identifier
+    VAR egm_minmax egm_condition:=[-10,10];
+
 	TASK PERS tooldata PenJank:=[TRUE,[[-63.0663,45.907,311.334],[1,0,0,0]],[0.2,[0,0,100],[1,0,0,0],0,0,0]];
 	TASK PERS wobjdata training_paper:=[FALSE,TRUE,"",[[494.049,-18.5946,-6.94719],[0.999986,0.0024666,-0.00304233,0.00354377]],[[0,0,0],[1,0,0,0]]];
 	PROC main_draw()
@@ -28,6 +31,18 @@ MODULE Training
 		MoveL head_top, v200, z50, PenJank\WObj:=training_paper;
 		MoveC head_right, head_bottom, v200, z10, PenJank\WObj:=training_paper;
 		MoveC head_left, head_top, v200, z10, PenJank\WObj:=training_paper;
+	ENDPROC
+	PROC EGMTraining()
+		EGMGetId egmID1;
+        ! Set up EGM for Cartesian pose control
+        EGMSetupUC ROB_1, egmID1, "default", "UCdevice"\Joint;
+        EGMStreamStart egmID1\SampleRate:=16;
+        
+        MoveL TopPlateHome, v20, z0, grinder_assembly\WObj:=wobj_samplePlate;
+        MoveL BtmPlateHome, v20, z0, grinder_assembly\WObj:=wobj_samplePlate;
+        
+        EGMStreamStop egmID1;
+        EGMReset egmID1;
 	ENDPROC
 
 ENDMODULE
